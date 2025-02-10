@@ -1,1 +1,24 @@
+Task 1: What is "REST API" and CRUD operations.
 
+Representational State Transfer API which is used to build the web services and allows for the communication between client and the server over the https.
+The Hyper Text Transfer Protocol (HTTPS) have various methods such as:
+1. GET (use to retrieve the resource/data)
+2. POST (use to create a new resource each time)
+3. PUT (Update the entire resource)
+4. Delete (Delete/remove the resources)
+
+The key characteristics of Rest API are that it stores the necessary information from client and server does not store the client session data.
+other than that using it is using https methods to perform any action on resources.
+it supports multiple data formats such as XML and JSON.
+
+CRUD Operations includes 4 Operations which are Create,Read,Update,Delete .
+Their Purposes are as Following:
+1. Create is use to create a new resource.
+2. Read is use to retrieve one or more resource
+3. Update is use to make changes/modification in an existing resources
+4. Delete is use for deleting any resources.
+
+With the help of HTTPS methods CRUD uses Create with POST , Read with GET , Update with Put/Patch (patch can be used for partial updation in resources)
+- A REST API follows various REST principles and allows communication over HTTP.
+- CRUD operations are used to manage resources in REST APIs.
+- HTTP methods (POST, GET, PUT, PATCH, DELETE) correspond to CRUD actions.
