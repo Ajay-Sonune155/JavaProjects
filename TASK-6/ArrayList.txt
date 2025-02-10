@@ -44,3 +44,7 @@ public class Q24 {
         destination.displayData();
     }
 }
+
+
+OUTPUT:
+Received Data: [Apple, Banana, Guava]
