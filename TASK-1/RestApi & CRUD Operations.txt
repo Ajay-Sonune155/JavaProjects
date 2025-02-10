@@ -22,3 +22,4 @@ With the help of HTTPS methods CRUD uses Create with POST , Read with GET , Upda
 - A REST API follows various REST principles and allows communication over HTTP.
 - CRUD operations are used to manage resources in REST APIs.
 - HTTP methods (POST, GET, PUT, PATCH, DELETE) correspond to CRUD actions.
+ 
