@@ -1,5 +1,5 @@
 # Java Collection Framework  
-This project provides an in-depth exploration of the **Java Collection Framework (JCF)**, covering key interfaces, classes, and their practical implementations. It serves as a reference for understanding and utilizing collections effectively in Java.  
+This project provides an in-depth exploration of the **Java Collection Framework (JCF)**, covering key interfaces, classes, and their practical implementations. It serves as a reference for understanding and utilizing collections effectively in Java.      
 
 ## Features  
 - Overview of Collection Framework and its importance  
