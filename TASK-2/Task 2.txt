@@ -1,0 +1,119 @@
+Task 2:
+What are OOPS concepts? And give two real world examples where atleast two OOPS concepts have been applied? 
+
+OOPS is a style or way of maintaining the code structure for promoting code reusability , modularity , ease of maintaining the code. 
+The concept of OOPS revolves around the object of a class which contains attributes (properties) and methods (behavior) of the object.
+
+for example, a dog has a breed , color , eyes, legs these are consider as it's attributes or properties ,and his actions (behavior/method) are barking or jumping or whatever
+the action is performed by that dog is consider as it's method/behavior.
+
+The 4 pillar of OOPS are:
+1. Encapsulation:  
+By using access modifiers such as public,private,protected and getters/setters method to protect data from direct modification and ensures controlled access to sensitive data.
+
+2. Abstraction:
+It Hides unnecessary details from users and ensures only essential details are exposed by using abstract classes and interfaces
+
+3. Inheritance:
+its all about inheriting or getting the properties from super class TO sub-class for promoting code reusability from the parent class
+
+4. Polymorphism:
+by using overloading and overriding we can provide flexibility in method functionality.
+
+Lets do real world example with 2 of the core concept:
+EXAMPLE- 1
+Inheritance-
+
+// superClass
+class Animal {
+    String name;
+
+    //methods of superclass
+    public void eat() {
+        System.out.println(name + " is eating.");
+    }
+    // 2nd method
+    public void sleep() {
+        System.out.println(name + " is sleeping.");
+    }
+}
+// lets make sub class now
+// and do inheritance
+class Dog extends Animal {
+    // Additional method in the child class
+    public void bark() {
+        System.out.println(name + " is barking.");
+    }
+}
+
+// Main class to FiNaLLy test Inheritance
+public class inh {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();   // new keyword allocate memory for our object
+        myDog.name = "Buddy";  // Inherited property from Animal
+        
+        // Inherited method
+        myDog.eat();   
+        myDog.sleep(); 
+        myDog.bark();  // sub class method
+    }
+}
+
+OUTPUT:
+Buddy is eating.
+Buddy is sleeping.
+Buddy is barking.
+
+
+EXAMPLE- 2
+Abstraction-
+
+// creating abstract class
+abstract class Drink {
+
+    // Abstract method w/o implementation)
+    public abstract void prepare();
+
+    // another method
+    public void serve() {
+        System.out.println("Your drink is ready to be served! ");
+    }
+}
+
+// Subclass 1: Tea
+class Tea extends Drink {
+    @Override
+    public void prepare() {
+        System.out.println("Preparing a cup of tea. ");
+    }
+}
+
+// Subclass 2: Coffee
+class Coffee extends Drink {
+    @Override
+    public void prepare() {
+        System.out.println("Preparing a cup of coffee. ");
+    }
+}
+
+// Main class to test abstraction
+public class abs {
+    public static void main(String[] args) {
+        Drink myTea = new Tea();   // Using abstraction to create a tea object
+        Drink myCoffee = new Coffee(); // Using abstraction to create a coffee object
+
+        myTea.prepare();  
+        myTea.serve();
+
+        myCoffee.prepare();
+        myCoffee.serve();
+    }
+}
+
+Output:
+Preparing a cup of tea. 
+Your drink is ready to be served! 
+Preparing a cup of coffee. 
+Your drink is ready to be served! 
+
+
