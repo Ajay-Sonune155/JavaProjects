@@ -1,0 +1,52 @@
+Task 5 
+Topic: HashMap 
+
+A HashMap store items in "key/value" pairs, and you can access them by an index of another type (e.g. a String).
+One object is used as a key (index) to another object (value). It can store different types: String keys and Integer values, or the same type, like: String keys and String values
+lets perform some basic operations in the hashmap
+
+For example,
+Let's Create a HashMap object called capitalCities that will store String keys and String values:
+
+import java.util.HashMap; // Import the HashMap class
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a HashMap object called capitalCities
+        HashMap<String, String> capitalCities = new HashMap<>();
+
+        // Add keys and values (Country, City)
+        capitalCities.put("England", "London");
+        capitalCities.put("Germany", "Berlin");
+        capitalCities.put("Norway", "Oslo");
+        capitalCities.put("USA", "Washington DC");
+
+        // Print the HashMap
+        System.out.println("Capital Cities: " + capitalCities);
+
+        // Access an item using get()
+        System.out.println("Capital of England: " + capitalCities.get("England"));
+
+        // Remove an item
+        capitalCities.remove("England");
+        System.out.println("After removing England: " + capitalCities);
+
+        // Display the size of the HashMap
+        System.out.println("Size of HashMap: " + capitalCities.size());
+
+        // Clear all items
+        capitalCities.clear();
+        System.out.println("After clearing: " + capitalCities);
+    }
+}
+
+Output:
+Capital Cities: {USA=Washington DC, Norway=Oslo, England=London, Germany=Berlin}
+Capital of England: London
+After removing England: {USA=Washington DC, Norway=Oslo, Germany=Berlin}
+Size of HashMap: 3
+After clearing: {}
+
+
+
+
