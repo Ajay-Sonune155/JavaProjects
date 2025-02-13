@@ -1,0 +1,69 @@
+Task-9 java collection framework
+The Java Collection Framework (JCF) provides a set of classes and interfaces to store and manipulate groups of objects efficiently. It includes List, Set, Map, and Queue,
+
+List (Keeps Order, Allows Duplicates)
+ArrayList - Works like a resizable array, great for searching, but adding/removing in the middle is slow.
+LinkedList - Made of nodes linked together, adding/removing is fast, but searching is slow.
+
+Set (No Duplicates, Unique Only)
+HashSet - Unordered, removes duplicates automatically.
+TreeSet - Same as HashSet, but keeps elements sorted.
+
+Map (Key-Value Storage)
+HashMap - Stores data in key-value pairs, super fast lookup.
+TreeMap - Like HashMap, but keeps keys sorted.
+
+Queue (First In, First Out)
+PriorityQueue - Processes elements based on priority instead of order
+
+
+// This Program demonstrates the use and efficiency provided by the collection framework--
+
+import java.util.*;
+public class CollectionFrameworkPractice {
+    public static void main(String[] args) {
+        // 1. ArrayList Example - A dynamic array that allows duplicates and maintains order
+        List<String> arrayList = new ArrayList<>();
+        arrayList.add("Apple");
+        arrayList.add("Banana");
+        arrayList.add("Cherry");
+        arrayList.add("Banana"); // Duplicates are allowed
+        System.out.println("ArrayList: " + arrayList);  // Prints elements in the order they were added
+
+        // 2. LinkedList Example - Works like a chain, fast for adding/removing but slow for searching
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(10);
+        linkedList.addFirst(5);  // Adding at the beginning
+        linkedList.addLast(15);  // Adding at the end
+        System.out.println("LinkedList: " + linkedList);
+
+        // 3. HashSet Example - Stores only unique values, removes duplicates automatically
+        Set<String> hashSet = new HashSet<>(arrayList);
+        System.out.println("HashSet (removes duplicates): " + hashSet);  // Order is not guaranteed
+
+        // 4. HashMap Example - Stores key-value pairs, great for fast lookup
+        Map<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(101, "Alice");
+        hashMap.put(102, "Bob");
+        hashMap.put(103, "Charlie");
+        System.out.println("HashMap: " + hashMap);
+        System.out.println("Student with ID 102: " + hashMap.get(102)); // Fetching value by key
+
+        // 5. TreeSet Example - Like HashSet but keeps values sorted
+        TreeSet<Integer> treeSet = new TreeSet<>();
+        treeSet.add(40);
+        treeSet.add(10);
+        treeSet.add(30);
+        treeSet.add(20);
+        System.out.println("TreeSet (sorted): " + treeSet);  // Elements are automatically sorted
+    }
+}
+
+OutPut:
+ArrayList: [Apple, Banana, Cherry, Banana]
+LinkedList: [5, 10, 15]
+HashSet (removes duplicates): [Apple, Cherry, Banana]
+HashMap: {101=Alice, 102=Bob, 103=Charlie}
+Student with ID 102: Bob
+TreeSet (sorted): [10, 20, 30, 40]
+
